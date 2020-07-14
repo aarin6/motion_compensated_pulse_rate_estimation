@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>pulse_rate_starter</title>
+<title>unit_test</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13017,64 +13017,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-<style type="text/css">
-    
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-
-    </style>
-<style type="text/css">
-    body[data-notebook-name] > #header #header-container:not(.show-panel), /* body has data-notebook-name attribute when 
-a notebook is open. this rule won't be applied when the notebook is not open (in 404 view for example) */
-body[data-notebook-name] #menubar-container #maintoolbar:not(.show-panel),
-body[data-notebook-name] #menubar-container ul.navbar-nav:not(.show-panel) {
-  display: none;
-}
-
-#menubar.only-panel #menus.navbar-default {
-    background: #fff;
-    border-color: #fff;
-}
-
-.toolbar.with-statusbar{
-    margin-top: 3px;
-    margin-bottom: 0;
-}
-
-    </style>
 
 
 <style type="text/css">
@@ -13108,7 +13050,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13135,39 +13077,32 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Part-1:-Pulse-Rate-Algorithm">Part 1: Pulse Rate Algorithm<a class="anchor-link" href="#Part-1:-Pulse-Rate-Algorithm">&#182;</a></h2><h3 id="Contents">Contents<a class="anchor-link" href="#Contents">&#182;</a></h3><p>Fill out this notebook as part of your final project submission.</p>
-<p><strong>You will have to complete both the Code and Project Write-up sections.</strong></p>
-<ul>
-<li>The <a href="#Code">Code</a> is where you will write a <strong>pulse rate algorithm</strong> and already includes the starter code.<ul>
-<li>Imports - These are the imports needed for Part 1 of the final project. <ul>
-<li><a href="https://docs.python.org/3/library/glob.html">glob</a></li>
-<li><a href="https://numpy.org/">numpy</a></li>
-<li><a href="https://www.scipy.org/">scipy</a></li>
+<h1 id="Test-Your-Algorithm">Test Your Algorithm<a class="anchor-link" href="#Test-Your-Algorithm">&#182;</a></h1><h2 id="Instructions">Instructions<a class="anchor-link" href="#Instructions">&#182;</a></h2><ol>
+<li>From the <strong>Pulse Rate Algorithm</strong> Notebook you can do one of the following:<ul>
+<li>Copy over all the <strong>Code</strong> section to the following Code block.</li>
+<li>Download as a Python (<code>.py</code>) and copy the code to the following Code block.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>The <a href="#Project-Write-up">Project Write-up</a> to describe why you wrote the algorithm for the specific case.</li>
-</ul>
-<h3 id="Dataset">Dataset<a class="anchor-link" href="#Dataset">&#182;</a></h3><p>You will be using the <strong>Troika</strong>[1] dataset to build your algorithm. Find the dataset under <code>datasets/troika/training_data</code>. The <code>README</code> in that folder will tell you how to interpret the data. The starter code contains a function to help load these files.</p>
-<ol>
-<li>Zhilin Zhang, Zhouyue Pi, Benyuan Liu, ‘‘TROIKA: A General Framework for Heart Rate Monitoring Using Wrist-Type Photoplethysmographic Signals During Intensive Physical Exercise,’’IEEE Trans. on Biomedical Engineering, vol. 62, no. 2, pp. 522-531, February 2015. Link</li>
+<li>In the bottom right, click the <span style="color:blue">Test Run</span> button. </li>
 </ol>
-<hr>
+<h3 id="Didn't-Pass">Didn't Pass<a class="anchor-link" href="#Didn't-Pass">&#182;</a></h3><p>If your code didn't pass the test, go back to the previous Concept or to your local setup and continue iterating on your algorithm and try to bring your training error down before testing again.</p>
+<h3 id="Pass">Pass<a class="anchor-link" href="#Pass">&#182;</a></h3><p>If your code passes the test, complete the following! You <strong>must</strong> include a screenshot of your code and the Test being <strong>Passed</strong>. Here is what the starter filler code looks like when the test is run and should be similar. A passed test will include in the notebook a green outline plus a box with <strong>Test passed:</strong> and in the Results bar at the bottom the progress bar will be at 100% plus a checkmark with <strong>All cells passed</strong>.
+<img src="example.png" alt="Example"></p>
+<ol>
+<li>Take a screenshot of your code passing the test, make sure it is in the format <code>.png</code>. If not a <code>.png</code> image, you will have to edit the Markdown render the image after Step 3. Here is an example of what the <code>passed.png</code> would look like </li>
+<li>Upload the screenshot to the same folder or directory as this jupyter notebook.</li>
+<li>Rename the screenshot to <code>passed.png</code> and it should show up below.
+<img src="passed.png" alt="Passed"></li>
+<li>Download this jupyter notebook as a <code>.pdf</code> file. </li>
+<li>Continue to Part 2 of the Project. </li>
+</ol>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Code">Code<a class="anchor-link" href="#Code">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
@@ -13175,8 +13110,8 @@ div#notebook {
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
 <span class="kn">import</span> <span class="nn">scipy.io</span><span class="o">,</span> <span class="nn">scipy.signal</span>
-<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="k">import</span> <span class="n">RandomForestRegressor</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">KFold</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">KFold</span>
 
 
 <span class="k">def</span> <span class="nf">LoadTroikaDataset</span><span class="p">():</span>
@@ -13260,41 +13195,110 @@ div#notebook {
     <span class="n">confs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span><span class="n">confs</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">AggregateErrorMetric</span><span class="p">(</span><span class="n">errs</span><span class="p">,</span> <span class="n">confs</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">Iterator</span><span class="p">(</span><span class="n">data_len</span><span class="p">,</span> <span class="n">ref_len</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="mi">125</span><span class="p">,</span> <span class="n">win_len</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">win_shift</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+
+<span class="n">fs</span> <span class="o">=</span> <span class="mi">125</span>
+<span class="n">win_len</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">win_shift</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">past_window</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">pass_band</span> <span class="o">=</span> <span class="p">(</span><span class="mi">40</span><span class="o">/</span><span class="mi">60</span><span class="p">,</span> <span class="mi">240</span><span class="o">/</span><span class="mi">60</span><span class="p">)</span>
+<span class="n">multiplier</span> <span class="o">=</span> <span class="mi">4</span>
+
+    
+
+<span class="k">def</span> <span class="nf">Bandpass_Filter</span><span class="p">(</span><span class="n">signal</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="mi">125</span><span class="p">):</span>
+    
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    bandpass_filter</span>
+<span class="sd">    Loads the signal and passes it through a Butterworth filter.</span>
+<span class="sd">    Args:</span>
+<span class="sd">        signal: signal Data from sensors</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        Band Pass filtered Signal</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1"># Initialising Buterworth Bandpass Filter</span>
+    <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">signal</span><span class="o">.</span><span class="n">butter</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">pass_band</span><span class="p">,</span> <span class="n">btype</span><span class="o">=</span><span class="s1">&#39;bandpass&#39;</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+    
+    <span class="sd">&#39;&#39;&#39;Returns the signal after applying digital butterworth filter</span>
+<span class="sd">    forward and backward to a signal.&#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="n">scipy</span><span class="o">.</span><span class="n">signal</span><span class="o">.</span><span class="n">filtfilt</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">signal</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">Counter</span><span class="p">(</span><span class="n">data_len</span><span class="p">,</span> <span class="n">ref_len</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generate left index and right index for iteration</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        data_len: length of original signal Data</span>
+<span class="sd">        ref_len: length of Reference Signal</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        left and right index which are start and end index</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">left</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">data_len</span><span class="p">,</span> <span class="n">ref_len</span><span class="p">))</span> <span class="o">*</span> <span class="n">fs</span> <span class="o">*</span> <span class="n">win_shift</span><span class="p">)</span> <span class="o">-</span> <span class="n">fs</span> <span class="o">*</span> <span class="n">win_shift</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">ref_len</span> <span class="o">&lt;</span> <span class="n">data_len</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">ref_len</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">data_len</span>
+    <span class="n">left</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">*</span> <span class="n">fs</span> <span class="o">*</span> <span class="n">win_shift</span><span class="p">)</span> <span class="o">-</span> <span class="n">fs</span> <span class="o">*</span> <span class="n">win_shift</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="n">left</span> <span class="o">+</span> <span class="n">fs</span><span class="o">*</span><span class="n">win_len</span>
     <span class="k">return</span> <span class="n">left</span><span class="p">,</span> <span class="n">left</span> <span class="o">+</span> <span class="n">fs</span> <span class="o">*</span> <span class="n">win_len</span>
 
-<span class="k">def</span> <span class="nf">BandpassFilter</span><span class="p">(</span><span class="n">signal</span><span class="p">,</span> <span class="n">pass_band</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="o">/</span><span class="mi">60</span><span class="p">,</span><span class="mi">240</span><span class="o">/</span><span class="mi">60</span><span class="p">),</span> <span class="n">fs</span><span class="o">=</span><span class="mi">125</span><span class="p">):</span>
-    <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">signal</span><span class="o">.</span><span class="n">butter</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">pass_band</span><span class="p">,</span> <span class="n">btype</span><span class="o">=</span><span class="s1">&#39;bandpass&#39;</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">sp</span><span class="o">.</span><span class="n">signal</span><span class="o">.</span><span class="n">filtfilt</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">signal</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">Creator</span><span class="p">(</span><span class="n">ppg</span><span class="p">,</span> <span class="n">accx</span><span class="p">,</span> <span class="n">accy</span><span class="p">,</span> <span class="n">accz</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="mi">125</span><span class="p">):</span>
+
+
+
+<span class="k">def</span> <span class="nf">Create</span><span class="p">(</span><span class="n">ppg</span><span class="p">,</span> <span class="n">accx</span><span class="p">,</span> <span class="n">accy</span><span class="p">,</span> <span class="n">accz</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Create features for model fitting</span>
+<span class="sd">    Create </span>
+<span class="sd">    </span>
+<span class="sd">    Loads signal Data from PPG and Accelarometer Senesor, then calculate the prediction and along with that a confidence score.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        ppg : Photoplethysmography (PPG) Sensor Data</span>
+<span class="sd">        accx: Accelerometer sensor data physical x-axis</span>
+<span class="sd">        accy: Accelerometer sensor data physical y-axis</span>
+<span class="sd">        accz: Accelerometer sensor data physical z-axis</span>
+<span class="sd">        </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        array of ppg_feature and acc_feature</span>
+<span class="sd">    </span>
+<span class="sd">    </span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ppg</span><span class="p">)</span> <span class="o">*</span> <span class="mi">4</span>
+    <span class="c1">#ppg = Bandpass_Filter(ppg)        </span>
+    <span class="c1">#accx = Bandpass_Filter(accx)</span>
+    <span class="c1">#accy = Bandpass_Filter(accy)</span>
+    <span class="c1">#accz = Bandpass_Filter(accz)</span>
+    
+    
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ppg</span><span class="p">)</span> <span class="o">*</span> <span class="n">multiplier</span>
     <span class="n">freqs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">rfftfreq</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="n">fs</span><span class="p">)</span>
     <span class="n">fft</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">rfft</span><span class="p">(</span><span class="n">ppg</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
-    <span class="n">fft</span><span class="p">[</span><span class="n">freqs</span> <span class="o">&lt;=</span> <span class="mi">40</span><span class="o">/</span><span class="mi">60</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
-    <span class="n">fft</span><span class="p">[</span><span class="n">freqs</span> <span class="o">&gt;=</span> <span class="mi">240</span><span class="o">/</span><span class="mi">60</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">fft</span><span class="p">[</span><span class="n">freqs</span> <span class="o">&lt;=</span> <span class="n">pass_band</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">fft</span><span class="p">[</span><span class="n">freqs</span> <span class="o">&gt;=</span> <span class="n">pass_band</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="mf">0.0</span>
     
-    <span class="n">mag_acc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">accx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">accy</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">accz</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">acc_l2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">accx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">accy</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">accz</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
     
     <span class="c1"># FFT for acc</span>
-    <span class="n">acc_fft</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">rfft</span><span class="p">(</span><span class="n">mag_acc</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
-    <span class="n">acc_fft</span><span class="p">[</span><span class="n">freqs</span> <span class="o">&lt;=</span> <span class="mi">40</span><span class="o">/</span><span class="mi">60</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
-    <span class="n">acc_fft</span><span class="p">[</span><span class="n">freqs</span> <span class="o">&gt;=</span> <span class="mi">240</span><span class="o">/</span><span class="mi">60</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">acc_fft</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">rfft</span><span class="p">(</span><span class="n">acc_l2</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+    <span class="n">acc_fft</span><span class="p">[</span><span class="n">freqs</span> <span class="o">&lt;=</span> <span class="n">pass_band</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">acc_fft</span><span class="p">[</span><span class="n">freqs</span> <span class="o">&gt;=</span> <span class="n">pass_band</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="mf">0.0</span>
     
-    <span class="c1"># max frequency for ppg</span>
-    <span class="n">ppg_feature</span> <span class="o">=</span> <span class="n">freqs</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">fft</span><span class="p">)]</span>
-    <span class="c1"># max frequency for acc</span>
-    <span class="n">acc_feature</span> <span class="o">=</span> <span class="n">freqs</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">acc_fft</span><span class="p">)]</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">ppg_feature</span><span class="p">,</span> <span class="n">acc_feature</span><span class="p">])</span>
+    <span class="c1"># Calculating the max frequency for acc</span>
+    <span class="n">max_acc_fs</span> <span class="o">=</span> <span class="n">freqs</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">acc_fft</span><span class="p">)]</span>
+    
+    <span class="c1"># Calculating the max frequency for ppg</span>
+    <span class="n">max_ppg_fs</span> <span class="o">=</span> <span class="n">freqs</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">fft</span><span class="p">)]</span>
+    
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">max_ppg_fs</span><span class="p">,</span> <span class="n">max_acc_fs</span><span class="p">])</span>
 
-<span class="k">def</span> <span class="nf">BuildModel</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">my_Model</span><span class="p">():</span>
+    
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Building the model to be used.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
     <span class="c1"># Retrieve filenames through LoadTroikaDataset</span>
     <span class="n">data_fls</span><span class="p">,</span> <span class="n">ref_fls</span> <span class="o">=</span> <span class="n">LoadTroikaDataset</span><span class="p">()</span>
     <span class="n">features</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">signals</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
@@ -13302,15 +13306,15 @@ div#notebook {
     <span class="k">for</span> <span class="n">data_fl</span><span class="p">,</span> <span class="n">ref_fl</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">data_fls</span><span class="p">,</span> <span class="n">ref_fls</span><span class="p">):</span>
         <span class="n">signal</span> <span class="o">=</span> <span class="n">LoadTroikaDataFile</span><span class="p">(</span><span class="n">data_fl</span><span class="p">)</span>
         <span class="n">ref</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">scipy</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">loadmat</span><span class="p">(</span><span class="n">ref_fl</span><span class="p">)[</span><span class="s1">&#39;BPM0&#39;</span><span class="p">]])</span>
-        <span class="n">ls</span><span class="p">,</span> <span class="n">rs</span> <span class="o">=</span> <span class="n">Iterator</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">len</span><span class="p">(</span><span class="n">ref</span><span class="p">))</span>
+        <span class="n">ls</span><span class="p">,</span> <span class="n">rs</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">len</span><span class="p">(</span><span class="n">ref</span><span class="p">))</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ls</span><span class="p">)):</span>
             <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">ls</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">rs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-            <span class="n">ppg</span> <span class="o">=</span> <span class="n">BandpassFilter</span><span class="p">(</span><span class="n">signal</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">])</span>
-            <span class="n">accx</span> <span class="o">=</span> <span class="n">BandpassFilter</span><span class="p">(</span><span class="n">signal</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">])</span>
-            <span class="n">accy</span> <span class="o">=</span> <span class="n">BandpassFilter</span><span class="p">(</span><span class="n">signal</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">])</span>
-            <span class="n">accz</span> <span class="o">=</span> <span class="n">BandpassFilter</span><span class="p">(</span><span class="n">signal</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">])</span>
+            <span class="n">ppg</span> <span class="o">=</span> <span class="n">Bandpass_Filter</span><span class="p">(</span><span class="n">signal</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">])</span>
+            <span class="n">accx</span> <span class="o">=</span> <span class="n">Bandpass_Filter</span><span class="p">(</span><span class="n">signal</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">])</span>
+            <span class="n">accy</span> <span class="o">=</span> <span class="n">Bandpass_Filter</span><span class="p">(</span><span class="n">signal</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">])</span>
+            <span class="n">accz</span> <span class="o">=</span> <span class="n">Bandpass_Filter</span><span class="p">(</span><span class="n">signal</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">])</span>
             
-            <span class="n">features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Creator</span><span class="p">(</span><span class="n">ppg</span><span class="p">,</span> <span class="n">accx</span><span class="p">,</span> <span class="n">accy</span><span class="p">,</span> <span class="n">accz</span><span class="p">))</span>
+            <span class="n">features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Create</span><span class="p">(</span><span class="n">ppg</span><span class="p">,</span> <span class="n">accx</span><span class="p">,</span> <span class="n">accy</span><span class="p">,</span> <span class="n">accz</span><span class="p">))</span>
             <span class="n">labels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ref</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
             <span class="n">signals</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">ppg</span><span class="p">,</span> <span class="n">accx</span><span class="p">,</span> <span class="n">accy</span><span class="p">,</span> <span class="n">accz</span><span class="p">])</span>
     
@@ -13324,24 +13328,40 @@ div#notebook {
     <span class="k">return</span> <span class="n">model</span>
 
 <span class="k">def</span> <span class="nf">RunPulseRateAlgorithm</span><span class="p">(</span><span class="n">data_fl</span><span class="p">,</span> <span class="n">ref_fl</span><span class="p">):</span>
+    
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Run Pulse Rate Algorithm</span>
+<span class="sd">    </span>
+<span class="sd">    Loads data and model, then calculate errors and confidence rates from the data.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        data_fl: (string) Path to data file (MATLAB data)</span>
+<span class="sd">        ref_fl: (string) Path to reference data file (MATLAB data)</span>
+<span class="sd">        </span>
+<span class="sd">        </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        (np.array) Error scores</span>
+<span class="sd">        (np.array) Confidence rates</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
     <span class="c1"># Load data using LoadTroikaDataFile</span>
     <span class="n">signal</span> <span class="o">=</span> <span class="n">LoadTroikaDataFile</span><span class="p">(</span><span class="n">data_fl</span><span class="p">)</span>
     <span class="n">features</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">signals</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
     <span class="n">ref</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">scipy</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">loadmat</span><span class="p">(</span><span class="n">ref_fl</span><span class="p">)[</span><span class="s1">&#39;BPM0&#39;</span><span class="p">]])</span>
-    <span class="n">ls</span><span class="p">,</span> <span class="n">rs</span> <span class="o">=</span> <span class="n">Iterator</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">len</span><span class="p">(</span><span class="n">ref</span><span class="p">))</span>
+    <span class="n">ls</span><span class="p">,</span> <span class="n">rs</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">len</span><span class="p">(</span><span class="n">ref</span><span class="p">))</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ls</span><span class="p">)):</span>
         <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">ls</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">rs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="n">ppg</span> <span class="o">=</span> <span class="n">BandpassFilter</span><span class="p">(</span><span class="n">signal</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">])</span>
-        <span class="n">accx</span> <span class="o">=</span> <span class="n">BandpassFilter</span><span class="p">(</span><span class="n">signal</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">])</span>
-        <span class="n">accy</span> <span class="o">=</span> <span class="n">BandpassFilter</span><span class="p">(</span><span class="n">signal</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">])</span>
-        <span class="n">accz</span> <span class="o">=</span> <span class="n">BandpassFilter</span><span class="p">(</span><span class="n">signal</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">])</span>
+        <span class="n">ppg</span> <span class="o">=</span> <span class="n">Bandpass_Filter</span><span class="p">(</span><span class="n">signal</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">])</span>
+        <span class="n">accx</span> <span class="o">=</span> <span class="n">Bandpass_Filter</span><span class="p">(</span><span class="n">signal</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">])</span>
+        <span class="n">accy</span> <span class="o">=</span> <span class="n">Bandpass_Filter</span><span class="p">(</span><span class="n">signal</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">])</span>
+        <span class="n">accz</span> <span class="o">=</span> <span class="n">Bandpass_Filter</span><span class="p">(</span><span class="n">signal</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">])</span>
             
-        <span class="n">features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Creator</span><span class="p">(</span><span class="n">ppg</span><span class="p">,</span> <span class="n">accx</span><span class="p">,</span> <span class="n">accy</span><span class="p">,</span> <span class="n">accz</span><span class="p">))</span>
+        <span class="n">features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Create</span><span class="p">(</span><span class="n">ppg</span><span class="p">,</span> <span class="n">accx</span><span class="p">,</span> <span class="n">accy</span><span class="p">,</span> <span class="n">accz</span><span class="p">))</span>
         <span class="n">labels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ref</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
         <span class="n">signals</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">ppg</span><span class="p">,</span> <span class="n">accx</span><span class="p">,</span> <span class="n">accy</span><span class="p">,</span> <span class="n">accz</span><span class="p">])</span>
     
     <span class="n">features</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">features</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
-    <span class="n">model</span> <span class="o">=</span> <span class="n">BuildModel</span><span class="p">()</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">my_Model</span><span class="p">()</span>
     <span class="c1"># Compute pulse rate estimates and estimation confidence.</span>
     <span class="n">errors</span><span class="p">,</span> <span class="n">confidence</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
     
@@ -13349,16 +13369,16 @@ div#notebook {
         <span class="n">feature</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">features</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
         <span class="n">ppg</span><span class="p">,</span> <span class="n">accx</span><span class="p">,</span> <span class="n">accy</span><span class="p">,</span> <span class="n">accz</span> <span class="o">=</span> <span class="n">signals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
         <span class="n">pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">feature</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)))[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="n">ppg</span> <span class="o">=</span> <span class="n">BandpassFilter</span><span class="p">(</span><span class="n">ppg</span><span class="p">)</span>        
-        <span class="n">accx</span> <span class="o">=</span> <span class="n">BandpassFilter</span><span class="p">(</span><span class="n">accx</span><span class="p">)</span>
-        <span class="n">accy</span> <span class="o">=</span> <span class="n">BandpassFilter</span><span class="p">(</span><span class="n">accy</span><span class="p">)</span>
-        <span class="n">accz</span> <span class="o">=</span> <span class="n">BandpassFilter</span><span class="p">(</span><span class="n">accz</span><span class="p">)</span>        
+        <span class="n">ppg</span> <span class="o">=</span> <span class="n">Bandpass_Filter</span><span class="p">(</span><span class="n">ppg</span><span class="p">)</span>        
+        <span class="n">accx</span> <span class="o">=</span> <span class="n">Bandpass_Filter</span><span class="p">(</span><span class="n">accx</span><span class="p">)</span>
+        <span class="n">accy</span> <span class="o">=</span> <span class="n">Bandpass_Filter</span><span class="p">(</span><span class="n">accy</span><span class="p">)</span>
+        <span class="n">accz</span> <span class="o">=</span> <span class="n">Bandpass_Filter</span><span class="p">(</span><span class="n">accz</span><span class="p">)</span>        
         
         <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ppg</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span>
         <span class="n">freqs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">rfftfreq</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">125</span><span class="p">)</span>
         <span class="n">fft</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">rfft</span><span class="p">(</span><span class="n">ppg</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
-        <span class="n">fft</span><span class="p">[</span><span class="n">freqs</span> <span class="o">&lt;=</span> <span class="mi">40</span><span class="o">/</span><span class="mi">60</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
-        <span class="n">fft</span><span class="p">[</span><span class="n">freqs</span> <span class="o">&gt;=</span> <span class="mi">240</span><span class="o">/</span><span class="mi">60</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">fft</span><span class="p">[</span><span class="n">freqs</span> <span class="o">&lt;=</span> <span class="n">pass_band</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">fft</span><span class="p">[</span><span class="n">freqs</span> <span class="o">&gt;=</span> <span class="n">pass_band</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="mf">0.0</span>
     
         <span class="c1"># max frequency</span>
         <span class="n">pred_fs</span> <span class="o">=</span> <span class="n">pred</span> <span class="o">/</span> <span class="mi">55</span>
@@ -13378,62 +13398,6 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h3 id="Project-Write-up">Project Write-up<a class="anchor-link" href="#Project-Write-up">&#182;</a></h3><p>Answer the following prompts to demonstrate understanding of the algorithm you wrote for this specific context.</p>
-<blockquote><ul>
-<li><strong>Code Description</strong> - Include details so someone unfamiliar with your project will know how to run your code and use your algorithm. </li>
-<li><strong>Data Description</strong> - Describe the dataset that was used to train and test the algorithm. Include its short-comings and what data would be required to build a more complete dataset.</li>
-<li><strong>Algorithm Description</strong> will include the following:<ul>
-<li>how the algorithm works</li>
-<li>the specific aspects of the physiology that it takes advantage of</li>
-<li>a describtion of the algorithm outputs</li>
-<li>caveats on algorithm outputs </li>
-<li>common failure modes</li>
-</ul>
-</li>
-<li><strong>Algorithm Performance</strong> - Detail how performance was computed (eg. using cross-validation or train-test split) and what metrics were optimized for. Include error metrics that would be relevant to users of your algorithm. Caveat your performance numbers by acknowledging how generalizable they may or may not be on different datasets.</li>
-</ul>
-</blockquote>
-<p>Your write-up goes here...</p>
-<blockquote><ul>
-<li><strong>Code Description</strong><ul>
-<li>To run the code, RunPulseRateAlgorithm will take in two filenames and return a tuple of two numpy arrays--per-estimate pulse rate error and confidence values.  The Evaluate function can be also called on the Troika dataset to compute an aggregate error metric.</li>
-</ul>
-</li>
-<li><strong>Data Description</strong><ul>
-<li>The Troika dataset is used to train and test the algorithm, including PPG signal from two wrists, but just one is applied, and IMU signal from three dimensions.  ECG signal and both PPG signals could be required to improve performance.</li>
-</ul>
-</li>
-<li><strong>Algorithm Description</strong><ul>
-<li>A regression algorithm RandomForestRegressor is trained to fit the provided data.</li>
-<li>It takes advantage of the ability for PPG sensor to detect the amount of red blood cells under the wrists.</li>
-<li>The algorithm outputs are two numpy arrays: per-estimate pulse rate error and confidence values</li>
-<li>Per-estimate pulse rate error is the absolute difference between the predicted value and the ground truth, and confidence value is the relative difference.</li>
-<li>Common failure modes include hand motion and gesture movement.</li>
-</ul>
-</li>
-<li><strong>Algorithm Performance</strong><ul>
-<li>Performance is computed based on K-fold cross-validation, and error is the absolute bias between the predicted value and the ground truth.  Test result is Error = 10.98, but due to the small sample size, it might not be generalizable on other datasets.</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h3 id="Next-Steps">Next Steps<a class="anchor-link" href="#Next-Steps">&#182;</a></h3><p>You will now go to <strong>Test Your Algorithm</strong> to apply a unit test to confirm that your algorithm met the success criteria.</p>
-
-</div>
-</div>
 </div>
     </div>
   </div>
